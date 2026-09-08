@@ -1,2 +1,2 @@
 ﻿# Game in Blog (GiB)
-A Blogging Site for SEO Project by Dwayne.
+A Video Game Blogging Site for SEO Project by Dwayne.
