@@ -529,6 +529,17 @@ section.block + section.block { border-top: 1px solid var(--line); }
 .post-hero.full-bleed .post-dek {
   color: #d5d9de;
 }
+.post-hero.full-bleed .post-meta-details {
+  color: var(--text-muted);
+}
+.post-hero.full-bleed .hero-cover-content > .post-meta-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 14px;
+  color: #fff;
+  font-size: 0.75rem;
+}
 .post-hero.full-bleed .post-meta .tag {
   color: #fff;
 }
@@ -564,6 +575,10 @@ section.block + section.block { border-top: 1px solid var(--line); }
   max-width: 68ch;
   margin: 0 auto;
   padding: 40px 0 10px;
+}
+.post-body strong,
+.post-body em {
+  color: var(--pink);
 }
 .post-body p { text-align: justify; }
 .post-body h2 { margin-top: 1.6em; }
