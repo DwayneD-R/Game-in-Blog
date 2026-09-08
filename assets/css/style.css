@@ -771,6 +771,12 @@ section.block + section.block { border-top: 1px solid var(--line); }
   padding: 56px 0;
   text-align: center;
 }
+.cta-band .btn {
+  transition: transform 0.2s ease;
+}
+.cta-band .btn:hover {
+  transform: scale(1.04);
+}
 .cta-band h2 { margin-bottom: 10px; }
 .cta-band p { color: var(--text-muted); margin-bottom: 24px; }
 
