@@ -740,6 +740,7 @@ section.block + section.block { border-top: 1px solid var(--line); }
   display: flex;
   align-items: center;
   gap: 18px;
+  max-width: 100%;
 }
 .contact-card .ico {
   width: 44px; height: 44px;
@@ -754,8 +755,21 @@ section.block + section.block { border-top: 1px solid var(--line); }
 .contact-card:nth-child(2) .ico { background: var(--teal); }
 .contact-card:nth-child(3) .ico { background: var(--yellow); }
 .contact-card h3 { margin-bottom: 2px; font-size: 1.05rem; }
-.contact-card p { margin: 0; color: var(--text-muted); font-size: 0.92rem; }
-.contact-card a.overlay-link { color: var(--text); font-weight: 600; }
+.contact-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.contact-card a.overlay-link {
+  color: var(--text);
+  font-weight: 600;
+  word-break: break-all;
+}
+@media (max-width: 420px) {
+  .contact-card { flex-wrap: wrap; }
+}
 
 .pledge {
   margin-top: 36px;
