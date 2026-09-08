@@ -348,7 +348,9 @@ img { max-width: 100%; display: block; }
     order: -1;
     margin-bottom: 36px;
   }
-  .facet-3 { right: 120px; }
+  .facet-1 { left: calc(50% - 100px); right: auto; }
+  .facet-2 { left: calc(50% + 20px); right: auto; }
+  .facet-3 { left: calc(50% - 120px); right: auto; }
 }
 
 /* ---------- Section headers ---------- */
