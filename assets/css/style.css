@@ -136,6 +136,14 @@ img { max-width: 100%; display: block; }
   color: var(--text);
 }
 .brand img { width: 34px; height: 34px; }
+.brand img.brand-logo {
+  width: auto;
+  height: 40px;
+}
+.brand img.brand-logo-footer {
+  width: auto;
+  height: 34px;
+}
 .brand span {
   font-family: var(--font-display);
   font-weight: 700;
