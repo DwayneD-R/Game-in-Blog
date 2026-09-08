@@ -406,8 +406,61 @@ section.block + section.block { border-top: 1px solid var(--line); }
 }
 .post-cover img { width: 100%; }
 
+.post-cover-credit {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Full-bleed post hero (image spans viewport, title overlaid) ---------- */
+.post-hero.full-bleed {
+  padding: 0;
+}
+.post-hero.full-bleed .hero-cover {
+  position: relative;
+  width: 100%;
+  height: var(--hero-height, min(64vh, 520px));
+  overflow: hidden;
+}
+.post-hero.full-bleed .hero-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--hero-focus, center);
+  display: block;
+}
+.post-hero.full-bleed .hero-cover-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: var(--hero-gradient, linear-gradient(180deg, rgba(11,15,20,0) 30%, rgba(11,15,20,0.92) 100%));
+}
+.post-hero.full-bleed .hero-cover-overlay .wrap {
+  width: 100%;
+  padding-bottom: 40px;
+}
+.post-hero.full-bleed .hero-cover-content {
+  max-width: 68ch;
+  margin: 0 auto;
+}
+.post-hero.full-bleed .post-meta,
+.post-hero.full-bleed h1,
+.post-hero.full-bleed .post-dek {
+  text-align: left;
+}
+.post-hero.full-bleed h1 { max-width: 26ch; }
+.post-hero.full-bleed .post-cover-credit {
+  margin-top: 14px;
+}
+@media (max-width: 780px) {
+  .post-hero.full-bleed .hero-cover { height: var(--hero-height-mobile, 340px); }
+}
+
 .post-body {
   max-width: 68ch;
+  margin: 0 auto;
   padding: 40px 0 10px;
 }
 .post-body h2 { margin-top: 1.6em; }
@@ -454,9 +507,9 @@ section.block + section.block { border-top: 1px solid var(--line); }
 
 .post-footer {
   max-width: 68ch;
+  margin: 24px auto 0;
   padding: 24px 0 60px;
   border-top: 1px solid var(--line);
-  margin-top: 24px;
 }
 .post-footer .tags {
   display: flex; gap: 8px; flex-wrap: wrap;
