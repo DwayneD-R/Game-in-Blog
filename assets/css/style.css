@@ -421,7 +421,11 @@ section.block + section.block { border-top: 1px solid var(--line); }
 @media (max-width: 780px) {
   .featured { grid-template-columns: 1fr; }
   .featured .thumb { min-height: 200px; }
-  .featured .body { padding: 18px 20px 22px; }
+  .featured .body {
+    position: relative;
+    margin-top: -12px;
+    padding: 0 20px 22px;
+  }
 }
 
 /* ---------- Principles row (home) ---------- */
@@ -585,6 +589,7 @@ section.block + section.block { border-top: 1px solid var(--line); }
 .post-body h2:first-child { margin-top: 0; }
 .post-body figure { margin: 1.8em 0; }
 .post-body figure img {
+  margin-inline: auto;
   border-radius: var(--radius);
   border: 1px solid var(--line);
 }
@@ -592,6 +597,7 @@ section.block + section.block { border-top: 1px solid var(--line); }
   font-size: 0.88rem;
   color: var(--text-muted);
   margin-top: 8px;
+  text-align: center;
 }
 .post-body .video-embed {
   position: relative;
