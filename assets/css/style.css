@@ -571,13 +571,14 @@ section.block + section.block { border-top: 1px solid var(--line); }
   align-items: center;
   flex-wrap: wrap;
   gap: 0 14px;
-  color: #fff;
+  color: var(--yellow);
   font-size: 0.75rem;
 }
 .post-hero.full-bleed .post-meta .tag {
   color: #fff;
 }
 .post-hero.full-bleed h1 { max-width: 26ch; }
+.post-hero.full-bleed h1 { margin-bottom: 0.2em; }
 .post-hero.full-bleed .post-cover-credit {
   margin-top: 14px;
 }
