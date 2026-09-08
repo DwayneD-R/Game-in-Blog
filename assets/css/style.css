@@ -317,6 +317,8 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 900px) {
   .hero .wrap { grid-template-columns: 1fr; }
+  .hero { padding-bottom: 32px; }
+  .hero + section.block { padding-top: 40px; }
   .hero-copy {
     padding: 0 0 36px;
     border-right: 0;
@@ -412,7 +414,7 @@ section.block + section.block { border-top: 1px solid var(--line); }
 @media (max-width: 780px) {
   .featured { grid-template-columns: 1fr; }
   .featured .thumb { min-height: 200px; }
-  .featured .body { padding: 24px; }
+  .featured .body { padding: 0 24px 32px; }
 }
 
 /* ---------- Principles row (home) ---------- */
@@ -481,28 +483,31 @@ section.block + section.block { border-top: 1px solid var(--line); }
 .post-hero.full-bleed .hero-cover {
   position: relative;
   width: 100%;
-  height: var(--hero-height, min(64vh, 520px));
-  overflow: hidden;
+  min-height: var(--hero-height, min(64vh, 520px));
 }
 .post-hero.full-bleed .hero-cover img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: var(--hero-focus, center);
   display: block;
+  z-index: 1;
 }
 .post-hero.full-bleed .hero-cover-overlay {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  z-index: 2;
+  min-height: var(--hero-height, min(64vh, 520px));
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  background: var(--hero-gradient, linear-gradient(180deg, rgba(11,15,20,0.58) 0%, rgba(11,15,20,0.78) 55%, rgba(11,15,20,0.94) 100%));
+  background: var(--hero-gradient, linear-gradient(180deg, rgba(11,15,20,0.15) 0%, rgba(11,15,20,0.6) 55%, rgba(11,15,20,0.94) 100%));
 }
 .post-hero.full-bleed .hero-cover-overlay .wrap {
   width: 100%;
-  padding-top: 76px;
-  padding-bottom: 32px;
+  padding-top: 96px;
+  padding-bottom: 36px;
 }
 .post-hero.full-bleed .hero-cover-content {
   max-width: 68ch;
@@ -530,12 +535,13 @@ section.block + section.block { border-top: 1px solid var(--line); }
     align-items: center;
     min-width: 0;
   }
-  .post-hero.full-bleed .hero-cover { height: var(--hero-height-mobile, 420px); }
+  .post-hero.full-bleed .hero-cover { min-height: var(--hero-height-mobile, 380px); }
   .post-hero.full-bleed .hero-cover-overlay {
-    align-items: flex-start;
+    min-height: var(--hero-height-mobile, 380px);
+    align-items: flex-end;
   }
   .post-hero.full-bleed .hero-cover-overlay .wrap {
-    padding-top: 92px;
+    padding-top: 88px;
     padding-bottom: 28px;
   }
 }
