@@ -172,6 +172,9 @@ img { max-width: 100%; display: block; }
   background: var(--panel-raised);
   text-decoration: none;
 }
+.main-nav li:nth-child(1) a[aria-current="page"] { color: var(--pink); }
+.main-nav li:nth-child(2) a[aria-current="page"] { color: var(--teal); }
+.main-nav li:nth-child(3) a[aria-current="page"] { color: var(--yellow); }
 
 .nav-toggle {
   display: none;
@@ -685,7 +688,7 @@ section.block + section.block { border-top: 1px solid var(--line); }
   .avatar-block { position: sticky; top: 100px; }
 }
 .avatar-mark {
-  width: 84px; height: 84px;
+  width: 104px; height: 104px;
   margin: 0 auto 18px;
   object-fit: contain;
 }
