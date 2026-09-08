@@ -391,6 +391,9 @@ section.block + section.block { border-top: 1px solid var(--line); }
   border-radius: 999px;
   font-size: 0.75rem;
 }
+.post-meta-details {
+  display: contents;
+}
 .post-hero h1 { max-width: 20ch; }
 .post-dek {
   font-size: 1.15rem;
@@ -456,6 +459,18 @@ section.block + section.block { border-top: 1px solid var(--line); }
   margin-top: 14px;
 }
 @media (max-width: 780px) {
+  .post-hero.full-bleed .post-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px 12px;
+  }
+  .post-hero.full-bleed .post-meta-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    align-items: center;
+    min-width: 0;
+  }
   .post-hero.full-bleed .hero-cover { height: var(--hero-height-mobile, 420px); }
   .post-hero.full-bleed .hero-cover-overlay {
     align-items: flex-start;
